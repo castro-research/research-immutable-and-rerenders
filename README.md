@@ -1,34 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Deep Dive in React Immutable State
 
-## Getting Started
+## Description
 
-First, run the development server:
+This project focuses on exploring the concept of immutable objects and classes in the context of React applications. By utilizing technologies such as `useState`, `context`, `use-immer`, and `zustand`, the aim is to gain a better understanding of rendering and re-rendering processes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+One of the challenges addressed in this project is the potential inefficiency caused by re-rendering an entire list instead of just updating a single item. By carefully examining the behaviors of the aforementioned tools, we can mitigate unnecessary re-renders and optimize the performance of our React components.
+
+## Technologies Used
+
+- React: A JavaScript library for building user interfaces.
+- `useState`: A React hook used for managing state within functional components.
+- `context`: A feature in React that provides a way to share data between components without explicitly passing it through props.
+- `use-immer`: A custom hook that simplifies working with immutable state by leveraging the Immer library.
+- `zustand`: A small, fast state management library for React that provides a simple and flexible API.
+
+## Goals
+
+The main goals of this project are:
+
+1. Gain a deeper understanding of immutable objects and classes.
+2. Explore the behavior of React's `useState` hook and its impact on rendering and re-rendering.
+3. Understand the usage of `context` in managing shared data between components.
+4. Evaluate the benefits of using `use-immer` for working with immutable state.
+5. Investigate the capabilities of `zustand` as an alternative state management solution.
+
+## Installation
+
+To set up the project locally, follow these steps:
+
+1. Clone the repository
+2. Navigate to the project directory: `cd react-immutable-state`
+3. Install the dependencies: `npm install` or `yarn install`
+
+## Usage
+
+To start the development server and run the project, use the following command:
+
+```shell
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+or 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```shell
+yarn start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## License
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+```
