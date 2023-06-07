@@ -5,7 +5,7 @@ jest.spyOn(Date.prototype, 'getTime').mockReturnValue(100);
 
 
 describe('TestOne', () => {  
-    it('Should', async () => {
+    it('Should update only first time after dispatch onClick', async () => {
     render(<Page />);
 
     const button = await screen.findByRole('button', { name: 'item-1-add' }, { timeout: 3000 });
