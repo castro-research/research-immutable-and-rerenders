@@ -9,9 +9,9 @@ export default function Home() {
             <section>
                 <TestOne />
             </section>
-            <section>
+            {/* <section>
                 <StateApp />
-            </section>
+            </section> */}
         </main>
     )
 }
