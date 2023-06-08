@@ -19,6 +19,8 @@ const RenderItem = React.memo((props) => {
   )
 })
 
+RenderItem.displayName = 'RenderItem'
+
 export default function Home() {
   const { cart, handleAddQuantity, handleRemoveQuantity } = useCart()
 
