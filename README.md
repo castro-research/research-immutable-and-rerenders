@@ -8,11 +8,11 @@ One of the challenges addressed in this project is the potential inefficiency ca
 
 ## Technologies Used
 
-- React: A JavaScript library for building user interfaces.
-- `useState`: A React hook used for managing state within functional components.
-- `context`: A feature in React that provides a way to share data between components without explicitly passing it through props.
-- `use-immer`: A custom hook that simplifies working with immutable state by leveraging the Immer library.
-- `zustand`: A small, fast state management library for React that provides a simple and flexible API.
+-   React: A JavaScript library for building user interfaces.
+-   `useState`: A React hook used for managing state within functional components.
+-   `context`: A feature in React that provides a way to share data between components without explicitly passing it through props.
+-   `use-immer`: A custom hook that simplifies working with immutable state by leveraging the Immer library.
+-   `zustand`: A small, fast state management library for React that provides a simple and flexible API.
 
 ## Goals
 
@@ -40,7 +40,7 @@ To start the development server and run the project, use the following command:
 npm start
 ```
 
-or 
+or
 
 ```shell
 yarn start
@@ -49,4 +49,7 @@ yarn start
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+```
+
 ```

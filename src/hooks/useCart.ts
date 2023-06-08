@@ -1,14 +1,14 @@
-'use client';
-import getCart from "@/services/get-cart";
-import { ICart } from "@/types/Cart";
-import { produce } from "immer";
-import React from "react";
+'use client'
+import getCart from '@/services/get-cart'
+import { ICart } from '@/types/Cart'
+import { produce } from 'immer'
+import React from 'react'
 
 export default function useCart() {
-    const [cart, setCart] = React.useState<ICart[]>([]);
+    const [cart, setCart] = React.useState<ICart[]>([])
 
     const handleGetCart = async () => {
-        const cart = await getCart();
+        const cart = await getCart()
         const cartFormatted = cart.map((item) => {
             return {
                 id: item.id,
@@ -18,11 +18,11 @@ export default function useCart() {
             }
         })
 
-        setCart(cartFormatted);
+        setCart(cartFormatted)
     }
 
     React.useEffect(() => {
-        handleGetCart();
+        handleGetCart()
     }, [])
 
     const handleAddQuantity = (id: number) => {
@@ -35,27 +35,27 @@ export default function useCart() {
         // Try 2 - use immer to update the quantity
         setCart(
             produce((state: ICart[]) => {
-                const cartItem = state.find(currentItem => currentItem.id === id)
-                if(cartItem) {
+                const cartItem = state.find(
+                    (currentItem) => currentItem.id === id
+                )
+                if (cartItem) {
                     cartItem.quantity += 1
                 }
-            }
-        ))
+            })
+        )
     }
 
     const handleRemoveQuantity = (id: number) => {
-        const cartCopy = [...cart];
-        const index = cartCopy.findIndex(currentItem => currentItem.id === id)
+        const cartCopy = [...cart]
+        const index = cartCopy.findIndex((currentItem) => currentItem.id === id)
         cartCopy[index].quantity -= 1
-        setCart(cartCopy);
+        setCart(cartCopy)
     }
-
-    
 
     return {
         cart,
         setCart,
         handleAddQuantity,
-        handleRemoveQuantity
+        handleRemoveQuantity,
     }
 }

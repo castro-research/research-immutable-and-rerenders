@@ -13,17 +13,17 @@ const useCartState = create<ICartState>((set, get) => ({
     cart: [],
     setCart: (cart) => set({ cart }),
     handleAddQuantity: (index) =>
-    set(
-      produce((state: ICartState) => {
-        state.cart[index].quantity += 1
-      })
-    ),
+        set(
+            produce((state: ICartState) => {
+                state.cart[index].quantity += 1
+            })
+        ),
     handleRemoveQuantity: (index) =>
-    set(
-      produce((state) => {
-        state.cart[index].quantity -= 1
-      })
-    ),
+        set(
+            produce((state) => {
+                state.cart[index].quantity -= 1
+            })
+        ),
 }))
 
 export default useCartState

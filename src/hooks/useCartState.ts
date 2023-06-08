@@ -1,12 +1,12 @@
-import getCart from "@/services/get-cart";
-import useCartState from "@/state/cart";
-import React from "react";
+import getCart from '@/services/get-cart'
+import useCartState from '@/state/cart'
+import React from 'react'
 
 export default function useCart() {
-    const { setCart } = useCartState();
+    const { setCart } = useCartState()
 
     const handleGetCart = async () => {
-        const cart = await getCart();
+        const cart = await getCart()
         const cartFormatted = cart.map((item) => {
             return {
                 id: item.id,
@@ -16,14 +16,14 @@ export default function useCart() {
             }
         })
 
-        setCart(cartFormatted);
+        setCart(cartFormatted)
     }
 
     React.useEffect(() => {
-        handleGetCart();
+        handleGetCart()
     }, [])
 
     return {
-        setCart
+        setCart,
     }
 }
