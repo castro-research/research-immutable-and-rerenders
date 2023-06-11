@@ -6,6 +6,10 @@ This project focuses on exploring the concept of immutable objects and classes i
 
 One of the challenges addressed in this project is the potential inefficiency caused by re-rendering an entire list instead of just updating a single item. By carefully examining the behaviors of the aforementioned tools, we can mitigate unnecessary re-renders and optimize the performance of our React components.
 
+## Details of study
+
+Read the [GUIDEME.md](GUIDEME.md) file for a detailed explanation of the project.
+
 ## Technologies Used
 
 -   React: A JavaScript library for building user interfaces.
