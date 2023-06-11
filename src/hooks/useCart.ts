@@ -26,13 +26,6 @@ export default function useCart() {
     }, [])
 
     const handleAddQuantity = (id: number) => {
-        // Try 1 - clone the cart, find the index of the item, and update the quantity
-        // const cartCopy = [...cart];
-        // const index = cartCopy.findIndex(currentItem => currentItem.id === id)
-        // cartCopy[index].quantity += 1
-        // setCart(cartCopy);
-
-        // Try 2 - use immer to update the quantity
         setCart(
             produce((state: ICart[]) => {
                 const cartItem = state.find(
